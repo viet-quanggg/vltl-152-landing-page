@@ -1,0 +1,9 @@
+<!-- Team Member 2 Placeholder -->
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" fill="#DF7D64" opacity="0.2"/>
+  <circle cx="400" cy="350" r="120" fill="#DF7D64" opacity="0.3"/>
+  <circle cx="400" cy="330" r="60" fill="#DF7D64" opacity="0.5"/>
+  <ellipse cx="400" cy="450" rx="100" ry="120" fill="#DF7D64" opacity="0.5"/>
+  <text x="400" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#666">Team Member 2</text>
+  <text x="400" y="700" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#999">Replace with photo</text>
+</svg>

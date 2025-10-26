@@ -1,0 +1,7 @@
+<!-- Placeholder Logo SVG -->
+<svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="150" height="80" fill="#F1EEE3"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#DF7D64">NURSE</text>
+  <circle cx="25" cy="40" r="15" fill="#DF7D64" opacity="0.3"/>
+  <path d="M25 30 L25 50 M15 40 L35 40" stroke="#DF7D64" stroke-width="3" stroke-linecap="round"/>
+</svg>
