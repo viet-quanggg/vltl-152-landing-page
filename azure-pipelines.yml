@@ -1,0 +1,104 @@
+trigger:
+  branches:
+    include:
+      - main
+      - master
+  paths:
+    exclude:
+      - README.md
+      - CUSTOMIZATION.md
+      - .gitignore
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+  artifactName: 'nurse-website'
+
+stages:
+  - stage: Build
+    displayName: 'Build Static Website'
+    jobs:
+      - job: BuildJob
+        displayName: 'Build and Package Website'
+        steps:
+          - checkout: self
+            displayName: 'Checkout source code'
+
+          - task: CopyFiles@2
+            displayName: 'Copy website files'
+            inputs:
+              SourceFolder: '$(Build.SourcesDirectory)'
+              Contents: |
+                **/*
+                !.git/**
+                !.gitignore
+                !*.md
+                !azure-pipelines.yml
+              TargetFolder: '$(Build.ArtifactStagingDirectory)/website'
+              CleanTargetFolder: true
+
+          - task: ArchiveFiles@2
+            displayName: 'Archive website files'
+            inputs:
+              rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/website'
+              includeRootFolder: false
+              archiveType: 'zip'
+              archiveFile: '$(Build.ArtifactStagingDirectory)/$(artifactName)-$(Build.BuildId).zip'
+              replaceExistingArchive: true
+
+          - task: PublishBuildArtifacts@1
+            displayName: 'Publish Build Artifacts'
+            inputs:
+              PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+              ArtifactName: '$(artifactName)'
+              publishLocation: 'Container'
+
+  - stage: Deploy
+    displayName: 'Deploy to Azure'
+    dependsOn: Build
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - deployment: DeployWeb
+        displayName: 'Deploy Static Website'
+        environment: 'production'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: DownloadBuildArtifacts@0
+                  displayName: 'Download Build Artifacts'
+                  inputs:
+                    buildType: 'current'
+                    downloadType: 'single'
+                    artifactName: '$(artifactName)'
+                    downloadPath: '$(System.ArtifactsDirectory)'
+
+                - task: ExtractFiles@1
+                  displayName: 'Extract website files'
+                  inputs:
+                    archiveFilePatterns: '$(System.ArtifactsDirectory)/$(artifactName)/*.zip'
+                    destinationFolder: '$(System.DefaultWorkingDirectory)/website'
+                    cleanDestinationFolder: true
+
+                # Uncomment and configure for Azure Storage Static Website
+                # - task: AzureFileCopy@4
+                #   displayName: 'Deploy to Azure Storage'
+                #   inputs:
+                #     SourcePath: '$(System.DefaultWorkingDirectory)/website'
+                #     azureSubscription: '<Your-Azure-Subscription>'
+                #     Destination: 'AzureBlob'
+                #     storage: '<Your-Storage-Account-Name>'
+                #     ContainerName: '$web'
+                #     AdditionalArgumentsForBlobCopy: '--recursive'
+
+                # Uncomment and configure for Azure App Service
+                # - task: AzureWebApp@1
+                #   displayName: 'Deploy to Azure Web App'
+                #   inputs:
+                #     azureSubscription: '<Your-Azure-Subscription>'
+                #     appType: 'webApp'
+                #     appName: '<Your-Web-App-Name>'
+                #     package: '$(System.ArtifactsDirectory)/$(artifactName)/*.zip'
+                #     deploymentMethod: 'zipDeploy'

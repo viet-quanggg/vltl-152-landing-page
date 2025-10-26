@@ -1,0 +1,48 @@
+# Alternative: Simple Build Pipeline (No Deployment)
+
+# Use this if you only want to build and archive the website
+# without automatic deployment
+
+trigger:
+  branches:
+    include:
+      - main
+      - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  artifactName: 'nurse-website'
+
+steps:
+  - checkout: self
+    displayName: 'Checkout Repository'
+
+  - task: CopyFiles@2
+    displayName: 'Copy Website Files'
+    inputs:
+      SourceFolder: '$(Build.SourcesDirectory)'
+      Contents: |
+        index.html
+        css/**
+        js/**
+        images/**
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+      CleanTargetFolder: true
+
+  - task: ArchiveFiles@2
+    displayName: 'Create ZIP Archive'
+    inputs:
+      rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
+      includeRootFolder: false
+      archiveType: 'zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/$(artifactName).zip'
+      replaceExistingArchive: true
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(artifactName).zip'
+      ArtifactName: '$(artifactName)'
+      publishLocation: 'Container'
