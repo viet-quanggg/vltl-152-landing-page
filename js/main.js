@@ -1,5 +1,290 @@
 // Main JavaScript for Nurse Website
 
+// ===========================
+// Language Translation System
+// ===========================
+const translations = {
+    en: {
+        // Navigation
+        navHome: "Home",
+        navSeniorCare: "Elderly Care",
+        navChildrenCare: "Children's Care",
+        navTreatments: "Our Treatments",
+        navServices: "Treatments",
+        navPages: "Pages",
+        navAbout: "About Us",
+        navTeam: "Our Chiropractors",
+        navGallery: "Gallery",
+        navTestimonials: "Testimonials",
+        navPricing: "Pricing",
+        navFaq: "FAQ",
+        navBlog: "Blog",
+        navBlogStandard: "Blog - Standard",
+        navBlogGrid: "Blog - Grid",
+        navContact: "Contact",
+        getInTouch: "Book Appointment",
+        
+        // Hero Section
+        heroTitle: "Healing hands, caring hearts for all ages",
+        heroSubtitle: "Expert chiropractic care for elderly and children with bone and joint issues. We treat with experience, compassion, and dedication to your health.",
+        
+        // Form
+        formTitle: "Your healing journey starts here!",
+        formName: "Name",
+        formEmail: "Email",
+        formPhone: "Phone Number",
+        formSubject: "Concern/Issue",
+        formAgree: "I agree that my submitted data is being collected and stored.",
+        btnSendMessage: "Send Message",
+        formYourName: "Your Name",
+        formYourEmail: "Your Email",
+        formYourPhone: "Your Phone",
+        formYourMessage: "Describe your condition",
+        
+        // About Section
+        aboutTitle: "Experience healing from our hearts",
+        aboutDesc: "We specialize in chiropractic care for elderly patients and children facing bone and joint challenges. With years of experience and genuine compassion, we provide personalized treatment plans that restore mobility, reduce pain, and improve quality of life.",
+        videoCaption: "Watch how we help patients restore their health",
+        clinicName: "Vật lý trị liệu 152",
+        
+        // Services Section
+        servicesTitle: "Our Specialized Treatments",
+        servicesSubtitle: "Comprehensive chiropractic care for every age",
+        service1Title: "Elderly Joint Care",
+        service1Desc: "Gentle, effective treatment for arthritis, mobility issues, and age-related joint problems. We restore comfort and independence with care from our hearts.",
+        service2Title: "Pediatric Chiropractic",
+        service2Desc: "Specialized care for children's growing bones and joints. Safe, gentle adjustments for scoliosis, posture issues, and developmental concerns.",
+        service3Title: "Spinal Alignment",
+        service3Desc: "Expert spinal adjustments using proven techniques to relieve pain, improve posture, and enhance overall health for patients of all ages.",
+        service4Title: "Rehabilitation Therapy",
+        service4Desc: "Customized therapy programs combining adjustments, exercises, and wellness education to achieve lasting results and optimal health.",
+        
+        // Testimonials
+        testimonialsTitle: "Stories of Healing & Hope",
+        testimonialsSubtitle: "Real experiences from our patients and their families",
+        testimonial1: '"My grandmother\'s arthritis pain has decreased significantly. The care here truly comes from the heart. She can now walk with confidence again!"',
+        testimonial2: '"My son\'s posture improved dramatically after just a few sessions. The doctors are incredibly experienced and gentle with children."',
+        testimonial3: '"After years of back pain, I finally found relief. The team\'s expertise and compassionate care made all the difference in my healing journey."',
+        familyMember: "Patient",
+        
+        // Team Section
+        teamTitle: "Our Experienced Chiropractors",
+        teamSubtitle: "Healing with expertise, compassion, and heart",
+        team1Role: "Chief Chiropractor - 20+ Years Experience",
+        team2Role: "Pediatric Specialist",
+        team3Role: "Geriatric Care Expert",
+        
+        // Pricing Section
+        pricingTitle: "Treatment Packages",
+        pricingSubtitle: "Affordable healing plans designed for your health journey",
+        pricingBasic: "Initial Assessment",
+        pricingPremium: "Wellness Package",
+        pricingDeluxe: "Family Care Plan",
+        perMonth: "/session",
+        mostPopular: "Most Popular",
+        btnGetStarted: "Book Now",
+        basicFeature1: "Comprehensive evaluation",
+        basicFeature2: "Detailed health assessment",
+        basicFeature3: "Personalized treatment plan",
+        basicFeature4: "Initial adjustment",
+        premiumFeature1: "12 treatment sessions",
+        premiumFeature2: "Progress monitoring",
+        premiumFeature3: "Rehabilitation exercises",
+        premiumFeature4: "Nutrition guidance",
+        premiumFeature5: "Priority scheduling",
+        deluxeFeature1: "Care for 3 family members",
+        deluxeFeature2: "Unlimited consultations",
+        deluxeFeature3: "Home visit options",
+        deluxeFeature4: "Wellness workshops",
+        deluxeFeature5: "24/7 emergency support",
+        
+        // Contact Section
+        contactTitle: "Start Your Healing Journey",
+        contactDesc: "We care deeply about your health. Contact us to schedule a consultation or ask any questions about our chiropractic treatments.",
+        contactAddress: "Address",
+        contactPhone: "Phone",
+        contactEmail: "Email",
+        
+        // Footer
+        footerTagline: "Healing bones and joints with experience, compassion, and care from our hearts. Your health is our passion.",
+        footerQuickLinks: "Quick Links",
+        footerContactInfo: "Contact Info",
+        footerCopyright: "© 2025. All Rights Reserved.",
+        footerNursingCare: "Elderly Joint Care",
+        footerMedicalSupport: "Pediatric Chiropractic",
+        footerPersonalCare: "Spinal Alignment",
+        footerActivities: "Rehabilitation"
+    },
+    vi: {
+        // Navigation
+        navHome: "Trang Chủ",
+        navSeniorCare: "Chăm Sóc Người Cao Tuổi",
+        navChildrenCare: "Chăm Sóc Trẻ Em",
+        navTreatments: "Phương Pháp Điều Trị",
+        navServices: "Điều Trị",
+        navPages: "Trang",
+        navAbout: "Về Chúng Tôi",
+        navTeam: "Đội Ngũ Bác Sĩ",
+        navGallery: "Thư Viện Ảnh",
+        navTestimonials: "Đánh Giá",
+        navPricing: "Bảng Giá",
+        navFaq: "Câu Hỏi Thường Gặp",
+        navBlog: "Tin Tức",
+        navBlogStandard: "Tin Tức - Tiêu Chuẩn",
+        navBlogGrid: "Tin Tức - Lưới",
+        navContact: "Liên Hệ",
+        getInTouch: "Đặt Lịch Hẹn",
+        
+        // Hero Section
+        heroTitle: "Bàn tay chữa lành, trái tim yêu thương cho mọi lứa tuổi",
+        heroSubtitle: "Chăm sóc trị liệu xương khớp chuyên nghiệp cho người cao tuổi và trẻ em gặp vấn đề về xương và khớp. Chúng tôi điều trị bằng kinh nghiệm, lòng trắc ẩn và sự tận tâm với sức khỏe của bạn.",
+        
+        // Form
+        formTitle: "Hành trình chữa lành của bạn bắt đầu từ đây!",
+        formName: "Họ và Tên",
+        formEmail: "Email",
+        formPhone: "Số Điện Thoại",
+        formSubject: "Vấn Đề/Mối Quan Tâm",
+        formAgree: "Tôi đồng ý rằng dữ liệu đã gửi của tôi đang được thu thập và lưu trữ.",
+        btnSendMessage: "Gửi Tin Nhắn",
+        formYourName: "Tên Của Bạn",
+        formYourEmail: "Email Của Bạn",
+        formYourPhone: "Số Điện Thoại Của Bạn",
+        formYourMessage: "Mô tả tình trạng của bạn",
+        
+        // About Section
+        aboutTitle: "Trải nghiệm sự chữa lành từ trái tim chúng tôi",
+        aboutDesc: "Chúng tôi chuyên về chăm sóc trị liệu xương khớp cho bệnh nhân cao tuổi và trẻ em đối mặt với các thách thức về xương và khớp. Với nhiều năm kinh nghiệm và lòng trắc ẩn chân thành, chúng tôi cung cấp các kế hoạch điều trị cá nhân hóa giúp phục hồi khả năng vận động, giảm đau và cải thiện chất lượng cuộc sống.",
+        videoCaption: "Xem cách chúng tôi giúp bệnh nhân phục hồi sức khỏe",
+        clinicName: "Vật lý trị liệu 152",
+        
+        // Services Section
+        servicesTitle: "Phương Pháp Điều Trị Chuyên Khoa",
+        servicesSubtitle: "Chăm sóc trị liệu xương khớp toàn diện cho mọi lứa tuổi",
+        service1Title: "Chăm Sóc Khớp Người Cao Tuổi",
+        service1Desc: "Điều trị nhẹ nhàng, hiệu quả cho viêm khớp, vấn đề vận động và các vấn đề khớp liên quan đến tuổi tác. Chúng tôi phục hồi sự thoải mái và độc lập với sự chăm sóc từ trái tim.",
+        service2Title: "Trị Liệu Xương Khớp Nhi Khoa",
+        service2Desc: "Chăm sóc chuyên khoa cho xương và khớp đang phát triển của trẻ em. Điều chỉnh an toàn, nhẹ nhàng cho vẹo cột sống, vấn đề tư thế và các vấn đề phát triển.",
+        service3Title: "Chỉnh Cột Sống",
+        service3Desc: "Điều chỉnh cột sống chuyên nghiệp sử dụng các kỹ thuật đã được chứng minh để giảm đau, cải thiện tư thế và nâng cao sức khỏe tổng thể cho bệnh nhân ở mọi lứa tuổi.",
+        service4Title: "Trị Liệu Phục Hồi Chức Năng",
+        service4Desc: "Chương trình trị liệu tùy chỉnh kết hợp điều chỉnh, bài tập và giáo dục sức khỏe để đạt được kết quả lâu dài và sức khỏe tối ưu.",
+        
+        // Testimonials
+        testimonialsTitle: "Câu Chuyện Chữa Lành & Hy Vọng",
+        testimonialsSubtitle: "Trải nghiệm thực tế từ bệnh nhân và gia đình của họ",
+        testimonial1: '"Cơn đau viêm khớp của bà tôi đã giảm đáng kể. Sự chăm sóc ở đây thực sự đến từ trái tim. Bà giờ có thể đi lại tự tin trở lại!"',
+        testimonial2: '"Tư thế của con trai tôi đã cải thiện đáng kể chỉ sau vài buổi điều trị. Các bác sĩ cực kỳ giàu kinh nghiệm và nhẹ nhàng với trẻ em."',
+        testimonial3: '"Sau nhiều năm đau lưng, cuối cùng tôi đã tìm thấy sự giải thoát. Chuyên môn và sự chăm sóc tận tâm của đội ngũ đã tạo nên sự khác biệt trong hành trình chữa lành của tôi."',
+        familyMember: "Bệnh Nhân",
+        
+        // Team Section
+        teamTitle: "Đội Ngũ Bác Sĩ Giàu Kinh Nghiệm",
+        teamSubtitle: "Chữa lành bằng chuyên môn, lòng trắc ẩn và trái tim",
+        team1Role: "Bác Sĩ Trưởng - Hơn 20 Năm Kinh Nghiệm",
+        team2Role: "Chuyên Gia Nhi Khoa",
+        team3Role: "Chuyên Gia Chăm Sóc Người Cao Tuổi",
+        
+        // Pricing Section
+        pricingTitle: "Gói Điều Trị",
+        pricingSubtitle: "Các gói chữa lành phải chăng được thiết kế cho hành trình sức khỏe của bạn",
+        pricingBasic: "Đánh Giá Ban Đầu",
+        pricingPremium: "Gói Chăm Sóc Sức Khỏe",
+        pricingDeluxe: "Gói Chăm Sóc Gia Đình",
+        perMonth: "/buổi",
+        mostPopular: "Phổ Biến Nhất",
+        btnGetStarted: "Đặt Lịch",
+        basicFeature1: "Đánh giá toàn diện",
+        basicFeature2: "Kiểm tra sức khỏe chi tiết",
+        basicFeature3: "Kế hoạch điều trị cá nhân hóa",
+        basicFeature4: "Điều chỉnh ban đầu",
+        premiumFeature1: "12 buổi điều trị",
+        premiumFeature2: "Theo dõi tiến độ",
+        premiumFeature3: "Bài tập phục hồi chức năng",
+        premiumFeature4: "Hướng dẫn dinh dưỡng",
+        premiumFeature5: "Ưu tiên đặt lịch",
+        deluxeFeature1: "Chăm sóc cho 3 thành viên gia đình",
+        deluxeFeature2: "Tư vấn không giới hạn",
+        deluxeFeature3: "Tùy chọn khám tại nhà",
+        deluxeFeature4: "Hội thảo sức khỏe",
+        deluxeFeature5: "Hỗ trợ khẩn cấp 24/7",
+        
+        // Contact Section
+        contactTitle: "Bắt Đầu Hành Trình Chữa Lành",
+        contactDesc: "Chúng tôi quan tâm sâu sắc đến sức khỏe của bạn. Liên hệ với chúng tôi để đặt lịch tư vấn hoặc đặt bất kỳ câu hỏi nào về các phương pháp điều trị xương khớp.",
+        contactAddress: "Địa Chỉ",
+        contactPhone: "Điện Thoại",
+        contactEmail: "Email",
+        
+        // Footer
+        footerTagline: "Chữa lành xương và khớp bằng kinh nghiệm, lòng trắc ẩn và sự chăm sóc từ trái tim. Sức khỏe của bạn là niềm đam mê của chúng tôi.",
+        footerQuickLinks: "Liên Kết Nhanh",
+        footerContactInfo: "Thông Tin Liên Hệ",
+        footerCopyright: "© 2025. Tất Cả Quyền Được Bảo Lưu.",
+        footerNursingCare: "Chăm Sóc Khớp Người Cao Tuổi",
+        footerMedicalSupport: "Trị Liệu Xương Khớp Nhi Khoa",
+        footerPersonalCare: "Chỉnh Cột Sống",
+        footerActivities: "Phục Hồi Chức Năng"
+    }
+};
+
+// Current language (default to English)
+let currentLang = localStorage.getItem('language') || 'en';
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    initLanguage();
+    setupLanguageToggle();
+});
+
+function initLanguage() {
+    setLanguage(currentLang);
+}
+
+function setupLanguageToggle() {
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', function() {
+            // Toggle between languages
+            currentLang = currentLang === 'en' ? 'vi' : 'en';
+            setLanguage(currentLang);
+            localStorage.setItem('language', currentLang);
+        });
+    }
+}
+
+function setLanguage(lang) {
+    currentLang = lang;
+    
+    // Update toggle button active state
+    const langOptions = document.querySelectorAll('.lang-option');
+    langOptions.forEach(option => {
+        if (option.dataset.lang === lang) {
+            option.classList.add('active');
+        } else {
+            option.classList.remove('active');
+        }
+    });
+    
+    // Update all translated elements
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.dataset.translate;
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+    
+    // Update placeholder texts
+    const placeholders = document.querySelectorAll('[data-translate-placeholder]');
+    placeholders.forEach(element => {
+        const key = element.dataset.translatePlaceholder;
+        if (translations[lang] && translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+}
+
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const mainNav = document.getElementById('mainNav');

@@ -149,6 +149,20 @@ p {
     gap: 30px;
 }
 
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-text {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
 .logo-img {
     height: 40px;
     width: auto;
@@ -249,22 +263,45 @@ p {
     color: #ffffff;
 }
 
-.mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
+/* Language Toggle */
+.language-toggle {
+    display: flex;
+    align-items: center;
 }
 
-.mobile-menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 8px 12px;
+    border-radius: 20px;
     transition: var(--transition);
+}
+
+.lang-btn:hover {
+    background-color: var(--bg-light);
+}
+
+.lang-option {
+    color: var(--text-light);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.lang-option.active {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.lang-separator {
+    color: var(--text-light);
 }
 
 /* ===========================
@@ -497,6 +534,55 @@ section {
     border-radius: 20px;
 }
 
+/* About Video */
+.about-video {
+    margin: 30px 0;
+}
+
+.video-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.video-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-light);
+}
+
+/* About Gallery */
+.about-gallery {
+    margin: 30px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
 /* ===========================
    Forms
    =========================== */
@@ -542,6 +628,18 @@ section {
    =========================== */
 .services-section {
     background-color: var(--bg-light);
+}
+
+.services-images {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.services-images img {
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
 .services-grid {
@@ -594,6 +692,19 @@ section {
     background-color: var(--bg-light);
     padding: 40px;
     border-radius: 15px;
+}
+
+.testimonial-image {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    max-height: 200px;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .testimonial-content {
@@ -839,6 +950,12 @@ section {
     height: 40px;
     margin-bottom: 20px;
     filter: brightness(0) invert(1);
+}
+
+.footer-clinic-name {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin: 10px 0 20px 0;
 }
 
 .footer-col p {

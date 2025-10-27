@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nurse - Gentle Elder Care Support</title>
+    <title>Healing Hands Chiropractic - Expert Care for All Ages</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,41 +16,42 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.html" title="Vật lý trị liệu 152">
                         <img src="images/logo.svg" alt="Nurse Logo" class="logo-img">
+                        <span class="logo-text" data-translate="clinicName">Vật lý trị liệu 152</span>
                     </a>
                 </div>
 
                 <nav class="main-nav" id="mainNav">
                     <ul class="nav-menu">
                         <li class="menu-item has-dropdown">
-                            <a href="#home">Home</a>
+                            <a href="#home" data-translate="navHome">Home</a>
                             <ul class="dropdown">
-                                <li><a href="#senior-care">Senior Care</a></li>
-                                <li><a href="#home-nurse">Home Nurse</a></li>
-                                <li><a href="#senior-hospital">Senior Hospital</a></li>
+                                <li><a href="#senior-care" data-translate="navSeniorCare">Elderly Care</a></li>
+                                <li><a href="#children-care" data-translate="navChildrenCare">Children's Care</a></li>
+                                <li><a href="#treatments" data-translate="navTreatments">Our Treatments</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#services">Services</a></li>
+                        <li class="menu-item"><a href="#services" data-translate="navServices">Services</a></li>
                         <li class="menu-item has-dropdown">
-                            <a href="#pages">Pages</a>
+                            <a href="#pages" data-translate="navPages">Pages</a>
                             <ul class="dropdown">
-                                <li><a href="#about">About Us</a></li>
-                                <li><a href="#team">Our Team</a></li>
-                                <li><a href="#gallery">Gallery</a></li>
-                                <li><a href="#testimonials">Testimonials</a></li>
-                                <li><a href="#pricing">Pricing</a></li>
-                                <li><a href="#faq">FAQ</a></li>
+                                <li><a href="#about" data-translate="navAbout">About Us</a></li>
+                                <li><a href="#team" data-translate="navTeam">Our Team</a></li>
+                                <li><a href="#gallery" data-translate="navGallery">Gallery</a></li>
+                                <li><a href="#testimonials" data-translate="navTestimonials">Testimonials</a></li>
+                                <li><a href="#pricing" data-translate="navPricing">Pricing</a></li>
+                                <li><a href="#faq" data-translate="navFaq">FAQ</a></li>
                             </ul>
                         </li>
                         <li class="menu-item has-dropdown">
-                            <a href="#blog">Blog</a>
+                            <a href="#blog" data-translate="navBlog">Blog</a>
                             <ul class="dropdown">
-                                <li><a href="#blog-standard">Blog - Standard</a></li>
-                                <li><a href="#blog-grid">Blog - Grid</a></li>
+                                <li><a href="#blog-standard" data-translate="navBlogStandard">Blog - Standard</a></li>
+                                <li><a href="#blog-grid" data-translate="navBlogGrid">Blog - Grid</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#contact">Contact Us</a></li>
+                        <li class="menu-item"><a href="#contact" data-translate="navContact">Contact Us</a></li>
                     </ul>
                 </nav>
 
@@ -59,7 +60,14 @@
                         <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
                         <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
                     </div>
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <div class="language-toggle">
+                        <button id="langToggle" class="lang-btn" aria-label="Toggle Language">
+                            <span class="lang-option" data-lang="en">EN</span>
+                            <span class="lang-separator">|</span>
+                            <span class="lang-option active" data-lang="vi">VI</span>
+                        </button>
+                    </div>
+                    <a href="#contact" class="btn btn-primary" data-translate="getInTouch">Get in Touch</a>
                 </div>
 
                 <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
@@ -76,11 +84,11 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-left">
-                    <h1 class="hero-title">Gentle elder nurse care support</h1>
-                    <p class="hero-subtitle">A modern senior care center with skilled staff and a warm, supportive environment.</p>
+                    <h1 class="hero-title" data-translate="heroTitle">Healing hands, caring hearts for all ages</h1>
+                    <p class="hero-subtitle" data-translate="heroSubtitle">Expert chiropractic care for elderly and children with bone and joint issues. We treat with experience, compassion, and dedication to your health.</p>
                     
                     <div class="hero-cta">
-                        <a href="#contact" class="scroll-link">
+                        <a href="#contact" class="scroll-link" title="Get in Touch">
                             <div class="rotating-circle">
                                 <svg viewBox="0 0 200 200" class="circular-text">
                                     <defs>
@@ -113,28 +121,28 @@
                     </div>
                     
                     <div class="hero-form-card">
-                        <h2 class="form-title">Your care begins here. Visit today!</h2>
+                        <h2 class="form-title" data-translate="formTitle">Your healing journey starts here!</h2>
                         
                         <form class="hero-form" id="heroForm">
                             <div class="form-group">
-                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="text" name="name" data-translate-placeholder="formName" placeholder="Name" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="email" name="email" data-translate-placeholder="formEmail" placeholder="Email" required>
                             </div>
                             <div class="form-group">
-                                <input type="tel" name="phone" placeholder="Telephone">
+                                <input type="tel" name="phone" data-translate-placeholder="formPhone" placeholder="Telephone">
                             </div>
                             <div class="form-group">
-                                <input type="text" name="subject" placeholder="Subject">
+                                <input type="text" name="subject" data-translate-placeholder="formSubject" placeholder="Subject">
                             </div>
                             <div class="form-checkbox">
                                 <label>
                                     <input type="checkbox" required>
-                                    <span>I agree that my submitted data is being collected and stored.</span>
+                                    <span data-translate="formAgree">I agree that my submitted data is being collected and stored.</span>
                                 </label>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                            <button type="submit" class="btn btn-primary btn-full" data-translate="btnSendMessage">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -147,21 +155,41 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <h2 class="section-title">Your care begins here. Visit today!</h2>
-                    <p>We provide compassionate, professional care for seniors in a comfortable and supportive environment.</p>
+                    <h2 class="section-title" data-translate="aboutTitle">Experience healing from our hearts</h2>
+                    <p data-translate="aboutDesc">We specialize in chiropractic care for elderly patients and children facing bone and joint challenges. With years of experience and genuine compassion, we provide personalized treatment plans that restore mobility, reduce pain, and improve quality of life.</p>
+                    
+                    <!-- Video Introduction -->
+                    <div class="about-video">
+                        <div class="video-wrapper">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Chiropractic Care Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption" data-translate="videoCaption">Watch how we help patients restore their health</p>
+                    </div>
+
+                    <!-- Image Gallery -->
+                    <div class="about-gallery">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="images/z7158037294274_20c1bc6a0f0fd1bf68ebadd40847a569.jpg" alt="Patient Care" class="img-fluid">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/z7158037310892_80992135c47f5f70d3bcb4ce0f051220.jpg" alt="Treatment Room" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                     
                     <form class="contact-form">
                         <div class="form-row">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="text" name="name" data-translate-placeholder="formYourName" placeholder="Your Name" required>
+                            <input type="email" name="email" data-translate-placeholder="formYourEmail" placeholder="Your Email" required>
                         </div>
                         <div class="form-row">
-                            <input type="tel" name="phone" placeholder="Your Phone">
+                            <input type="tel" name="phone" data-translate-placeholder="formYourPhone" placeholder="Your Phone">
                         </div>
                         <div class="form-row">
-                            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                            <textarea name="message" rows="4" data-translate-placeholder="formYourMessage" placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary" data-translate="btnSendMessage">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -172,8 +200,13 @@
     <section class="services-section" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Comprehensive care tailored to your needs</p>
+                <h2 class="section-title" data-translate="servicesTitle">Our Specialized Treatments</h2>
+                <p class="section-subtitle" data-translate="servicesSubtitle">Comprehensive chiropractic care for every age</p>
+            </div>
+
+            <!-- Services Preview Images -->
+            <div class="services-images">
+                <img src="images/z7158037344363_664ad97d087b181d5bce03b35cc1519d.jpg" alt="Chiropractic Treatment" class="img-fluid">
             </div>
 
             <div class="services-grid">
@@ -183,8 +216,8 @@
                             <circle cx="32" cy="32" r="32" fill="#F1EEE3"/>
                         </svg>
                     </div>
-                    <h3>24/7 Nursing Care</h3>
-                    <p>Round-the-clock professional nursing care to ensure safety and comfort.</p>
+                    <h3 data-translate="service1Title">Elderly Joint Care</h3>
+                    <p data-translate="service1Desc">Gentle, effective treatment for arthritis, mobility issues, and age-related joint problems. We restore comfort and independence with care from our hearts.</p>
                 </div>
 
                 <div class="service-card">
@@ -193,8 +226,8 @@
                             <circle cx="32" cy="32" r="32" fill="#DF7D64"/>
                         </svg>
                     </div>
-                    <h3>Medical Support</h3>
-                    <p>Comprehensive medical services with experienced healthcare professionals.</p>
+                    <h3 data-translate="service2Title">Pediatric Chiropractic</h3>
+                    <p data-translate="service2Desc">Specialized care for children's growing bones and joints. Safe, gentle adjustments for scoliosis, posture issues, and developmental concerns.</p>
                 </div>
 
                 <div class="service-card">
@@ -203,8 +236,8 @@
                             <circle cx="32" cy="32" r="32" fill="#F1EEE3"/>
                         </svg>
                     </div>
-                    <h3>Personal Care</h3>
-                    <p>Individualized care plans designed for each resident's unique needs.</p>
+                    <h3 data-translate="service3Title">Spinal Alignment</h3>
+                    <p data-translate="service3Desc">Expert spinal adjustments using proven techniques to relieve pain, improve posture, and enhance overall health for patients of all ages.</p>
                 </div>
 
                 <div class="service-card">
@@ -213,8 +246,8 @@
                             <circle cx="32" cy="32" r="32" fill="#DF7D64"/>
                         </svg>
                     </div>
-                    <h3>Activities & Therapy</h3>
-                    <p>Engaging activities and therapeutic programs for mental and physical wellness.</p>
+                    <h3 data-translate="service4Title">Rehabilitation Therapy</h3>
+                    <p data-translate="service4Desc">Customized therapy programs combining adjustments, exercises, and wellness education to achieve lasting results and optimal health.</p>
                 </div>
             </div>
         </div>
@@ -224,38 +257,42 @@
     <section class="testimonials-section" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">What Families Say</h2>
-                <p class="section-subtitle">Hear from our satisfied families</p>
+                <h2 class="section-title" data-translate="testimonialsTitle">Stories of Healing & Hope</h2>
+                <p class="section-subtitle" data-translate="testimonialsSubtitle">Real experiences from our patients and their families</p>
             </div>
 
+            <!-- Testimonials with Patient Photos -->
             <div class="testimonials-grid">
                 <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/z7158048051505_a4318e079cf5b9bf817500e5841fc19c.jpg" alt="Happy Patient" class="img-fluid">
+                    </div>
                     <div class="testimonial-content">
-                        <p>"The care my mother receives is exceptional. The staff is compassionate and professional."</p>
+                        <p data-translate="testimonial1">"My grandmother's arthritis pain has decreased significantly. The care here truly comes from the heart. She can now walk with confidence again!"</p>
                     </div>
                     <div class="testimonial-author">
                         <h4>Sarah Johnson</h4>
-                        <span>Family Member</span>
+                        <span data-translate="familyMember">Grateful Family</span>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"I couldn't be happier with the level of care and attention my father gets every day."</p>
+                        <p data-translate="testimonial2">"My son's posture improved dramatically after just a few sessions. The doctors are incredibly experienced and gentle with children."</p>
                     </div>
                     <div class="testimonial-author">
                         <h4>Michael Brown</h4>
-                        <span>Family Member</span>
+                        <span data-translate="familyMember">Parent</span>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"The facility is clean, modern, and feels like home. Highly recommended!"</p>
+                        <p data-translate="testimonial3">"After years of back pain, I finally found relief. The team's expertise and compassionate care made all the difference in my healing journey."</p>
                     </div>
                     <div class="testimonial-author">
                         <h4>Emily Davis</h4>
-                        <span>Family Member</span>
+                        <span data-translate="familyMember">Patient</span>
                     </div>
                 </div>
             </div>
@@ -266,8 +303,8 @@
     <section class="team-section" id="team">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Expert Team</h2>
-                <p class="section-subtitle">Dedicated professionals caring for your loved ones</p>
+                <h2 class="section-title" data-translate="teamTitle">Our Experienced Chiropractors</h2>
+                <p class="section-subtitle" data-translate="teamSubtitle">Healing with expertise, compassion, and heart</p>
             </div>
 
             <div class="team-grid">
@@ -276,23 +313,23 @@
                         <img src="images/z7158037294274_20c1bc6a0f0fd1bf68ebadd40847a569.jpg" alt="Team Member" class="img-fluid">
                     </div>
                     <h3>Dr. Jane Smith</h3>
-                    <span>Medical Director</span>
+                    <span data-translate="team1Role">Chief Chiropractor - 20+ Years Experience</span>
                 </div>
 
                 <div class="team-member">
                     <div class="member-image">
                         <img src="images/z7158037310892_80992135c47f5f70d3bcb4ce0f051220.jpg" alt="Team Member" class="img-fluid">
                     </div>
-                    <h3>Robert Wilson</h3>
-                    <span>Head Nurse</span>
+                    <h3>Dr. Robert Wilson</h3>
+                    <span data-translate="team2Role">Pediatric Specialist</span>
                 </div>
 
                 <div class="team-member">
                     <div class="member-image">
                         <img src="images/z7158037344363_664ad97d087b181d5bce03b35cc1519d.jpg" alt="Team Member" class="img-fluid">
                     </div>
-                    <h3>Lisa Anderson</h3>
-                    <span>Care Coordinator</span>
+                    <h3>Dr. Lisa Anderson</h3>
+                    <span data-translate="team3Role">Geriatric Care Expert</span>
                 </div>
             </div>
         </div>
@@ -302,60 +339,60 @@
     <section class="pricing-section" id="pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Affordable Care Plans</h2>
-                <p class="section-subtitle">Choose the plan that fits your needs</p>
+                <h2 class="section-title" data-translate="pricingTitle">Treatment Packages</h2>
+                <p class="section-subtitle" data-translate="pricingSubtitle">Affordable healing plans designed for your health journey</p>
             </div>
 
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Basic Care</h3>
+                    <h3 data-translate="pricingBasic">Initial Assessment</h3>
                     <div class="price">
                         <span class="currency">$</span>
-                        <span class="amount">2,500</span>
-                        <span class="period">/month</span>
+                        <span class="amount">85</span>
+                        <span class="period" data-translate="perMonth">/session</span>
                     </div>
                     <ul class="features">
-                        <li>Daily nursing care</li>
-                        <li>Medication management</li>
-                        <li>Meals included</li>
-                        <li>Basic activities</li>
+                        <li data-translate="basicFeature1">Comprehensive evaluation</li>
+                        <li data-translate="basicFeature2">Detailed health assessment</li>
+                        <li data-translate="basicFeature3">Personalized treatment plan</li>
+                        <li data-translate="basicFeature4">Initial adjustment</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                    <a href="#contact" class="btn btn-outline" data-translate="btnGetStarted">Book Now</a>
                 </div>
 
                 <div class="pricing-card featured">
-                    <div class="badge">Most Popular</div>
-                    <h3>Premium Care</h3>
+                    <div class="badge" data-translate="mostPopular">Most Popular</div>
+                    <h3 data-translate="pricingPremium">Wellness Package</h3>
                     <div class="price">
                         <span class="currency">$</span>
-                        <span class="amount">4,000</span>
-                        <span class="period">/month</span>
+                        <span class="amount">450</span>
+                        <span class="period" data-translate="perMonth">/month</span>
                     </div>
                     <ul class="features">
-                        <li>24/7 nursing care</li>
-                        <li>Medical supervision</li>
-                        <li>All meals included</li>
-                        <li>Full activity program</li>
-                        <li>Physical therapy</li>
+                        <li data-translate="premiumFeature1">12 treatment sessions</li>
+                        <li data-translate="premiumFeature2">Progress monitoring</li>
+                        <li data-translate="premiumFeature3">Rehabilitation exercises</li>
+                        <li data-translate="premiumFeature4">Nutrition guidance</li>
+                        <li data-translate="premiumFeature5">Priority scheduling</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#contact" class="btn btn-primary" data-translate="btnGetStarted">Book Now</a>
                 </div>
 
                 <div class="pricing-card">
-                    <h3>Deluxe Care</h3>
+                    <h3 data-translate="pricingDeluxe">Family Care Plan</h3>
                     <div class="price">
                         <span class="currency">$</span>
-                        <span class="amount">6,000</span>
-                        <span class="period">/month</span>
+                        <span class="amount">850</span>
+                        <span class="period" data-translate="perMonth">/month</span>
                     </div>
                     <ul class="features">
-                        <li>Private suite</li>
-                        <li>Personal care assistant</li>
-                        <li>Specialized medical care</li>
-                        <li>All amenities included</li>
-                        <li>Family counseling</li>
+                        <li data-translate="deluxeFeature1">Care for 3 family members</li>
+                        <li data-translate="deluxeFeature2">Unlimited consultations</li>
+                        <li data-translate="deluxeFeature3">Home visit options</li>
+                        <li data-translate="deluxeFeature4">Wellness workshops</li>
+                        <li data-translate="deluxeFeature5">24/7 emergency support</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                    <a href="#contact" class="btn btn-outline" data-translate="btnGetStarted">Book Now</a>
                 </div>
             </div>
         </div>
@@ -366,40 +403,40 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <p>We'd love to hear from you. Reach out to us for any questions or to schedule a visit.</p>
+                    <h2 data-translate="contactTitle">Start Your Healing Journey</h2>
+                    <p data-translate="contactDesc">We care deeply about your health. Contact us to schedule a consultation or ask any questions about our chiropractic treatments.</p>
                     
                     <div class="info-item">
-                        <h4>Address</h4>
-                        <p>123 Care Street, Medical District<br>New York, NY 10001</p>
+                        <h4 data-translate="contactAddress">Address</h4>
+                        <p>456 Wellness Boulevard, Health District<br>New York, NY 10001</p>
                     </div>
 
                     <div class="info-item">
-                        <h4>Phone</h4>
-                        <p>(555) 123-4567</p>
+                        <h4 data-translate="contactPhone">Phone</h4>
+                        <p>(555) 789-4321</p>
                     </div>
 
                     <div class="info-item">
-                        <h4>Email</h4>
-                        <p>info@nursecare.com</p>
+                        <h4 data-translate="contactEmail">Email</h4>
+                        <p>care@healinghandschiro.com</p>
                     </div>
                 </div>
 
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="text" name="name" data-translate-placeholder="formYourName" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="email" name="email" data-translate-placeholder="formYourEmail" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Your Phone">
+                            <input type="tel" name="phone" data-translate-placeholder="formYourPhone" placeholder="Your Phone">
                         </div>
                         <div class="form-group">
-                            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                            <textarea name="message" rows="6" data-translate-placeholder="formYourMessage" placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-full" data-translate="btnSendMessage">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -411,40 +448,41 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <img src="images/logo.svg" alt="Nurse Logo" class="footer-logo">
-                    <p>Providing compassionate care for seniors with dignity and respect.</p>
+                    <img src="images/logo.svg" alt="Healing Hands Chiropractic Logo" class="footer-logo">
+                    <h3 class="footer-clinic-name" data-translate="clinicName">Vật lý trị liệu 152</h3>
+                    <p data-translate="footerTagline">Healing bones and joints with experience, compassion, and care from our hearts. Your health is our passion.</p>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4 data-translate="footerQuickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#team">Our Team</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about" data-translate="navAbout">About Us</a></li>
+                        <li><a href="#services" data-translate="navServices">Treatments</a></li>
+                        <li><a href="#team" data-translate="navTeam">Our Chiropractors</a></li>
+                        <li><a href="#contact" data-translate="navContact">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Services</h4>
+                    <h4 data-translate="navServices">Treatments</h4>
                     <ul>
-                        <li><a href="#services">Nursing Care</a></li>
-                        <li><a href="#services">Medical Support</a></li>
-                        <li><a href="#services">Personal Care</a></li>
-                        <li><a href="#services">Activities</a></li>
+                        <li><a href="#services" data-translate="footerNursingCare">Elderly Joint Care</a></li>
+                        <li><a href="#services" data-translate="footerMedicalSupport">Pediatric Chiropractic</a></li>
+                        <li><a href="#services" data-translate="footerPersonalCare">Spinal Alignment</a></li>
+                        <li><a href="#services" data-translate="footerActivities">Rehabilitation</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Contact Info</h4>
-                    <p>123 Care Street<br>New York, NY 10001</p>
-                    <p>Phone: (555) 123-4567</p>
-                    <p>Email: info@nursecare.com</p>
+                    <h4 data-translate="footerContactInfo">Contact Info</h4>
+                    <p>456 Wellness Boulevard<br>New York, NY 10001</p>
+                    <p><span data-translate="contactPhone">Phone</span>: (555) 789-4321</p>
+                    <p><span data-translate="contactEmail">Email</span>: care@healinghandschiro.com</p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025. All Rights Reserved.</p>
+                <p data-translate="footerCopyright">&copy; 2025. All Rights Reserved.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Twitter">Twitter</a>
                     <a href="#" aria-label="Instagram">Instagram</a>
