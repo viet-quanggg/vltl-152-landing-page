@@ -73,6 +73,7 @@ const translations = {
         team1Role: "Chief Chiropractor - 20+ Years Experience",
         team2Role: "Pediatric Specialist",
         team3Role: "Geriatric Care Expert",
+        teamGalleryTitle: "Our Clinic & Team",
         
         // Pricing Section
         pricingTitle: "Treatment Packages",
@@ -184,6 +185,7 @@ const translations = {
         team1Role: "Bác Sĩ Trưởng - Hơn 20 Năm Kinh Nghiệm",
         team2Role: "Chuyên Gia Nhi Khoa",
         team3Role: "Chuyên Gia Chăm Sóc Người Cao Tuổi",
+        teamGalleryTitle: "Phòng Khám & Đội Ngũ Của Chúng Tôi",
         
         // Pricing Section
         pricingTitle: "Gói Điều Trị",
@@ -486,6 +488,115 @@ function animateCounter(element, target, duration = 1000) {
         }
     }, 16);
 }
+
+// ===========================
+// Image Carousel
+// ===========================
+class Carousel {
+    constructor(containerSelector) {
+        this.container = document.querySelector(containerSelector);
+        if (!this.container) return;
+        
+        this.slides = this.container.querySelectorAll('.carousel-slide');
+        this.dots = this.container.querySelectorAll('.dot');
+        this.prevBtn = this.container.querySelector('.carousel-prev');
+        this.nextBtn = this.container.querySelector('.carousel-next');
+        
+        this.currentSlide = 0;
+        this.autoPlayInterval = null;
+        this.autoPlayDelay = 4000; // 4 seconds
+        
+        this.init();
+    }
+    
+    init() {
+        // Add event listeners
+        this.prevBtn?.addEventListener('click', () => this.prev());
+        this.nextBtn?.addEventListener('click', () => this.next());
+        
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // Start autoplay
+        this.startAutoPlay();
+        
+        // Pause on hover
+        this.container.addEventListener('mouseenter', () => this.stopAutoPlay());
+        this.container.addEventListener('mouseleave', () => this.startAutoPlay());
+        
+        // Handle touch swipe on mobile
+        this.handleTouchSwipe();
+    }
+    
+    goToSlide(index) {
+        // Remove active class from current slide and dot
+        this.slides[this.currentSlide]?.classList.remove('active');
+        this.dots[this.currentSlide]?.classList.remove('active');
+        
+        // Update current slide
+        this.currentSlide = index;
+        
+        // Add active class to new slide and dot
+        this.slides[this.currentSlide]?.classList.add('active');
+        this.dots[this.currentSlide]?.classList.add('active');
+    }
+    
+    next() {
+        const nextSlide = (this.currentSlide + 1) % this.slides.length;
+        this.goToSlide(nextSlide);
+    }
+    
+    prev() {
+        const prevSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+        this.goToSlide(prevSlide);
+    }
+    
+    startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => this.next(), this.autoPlayDelay);
+    }
+    
+    stopAutoPlay() {
+        if (this.autoPlayInterval) {
+            clearInterval(this.autoPlayInterval);
+            this.autoPlayInterval = null;
+        }
+    }
+    
+    handleTouchSwipe() {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        this.container.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        this.container.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            this.handleSwipe();
+        });
+        
+        const handleSwipe = () => {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    this.next(); // Swipe left
+                } else {
+                    this.prev(); // Swipe right
+                }
+            }
+        };
+        
+        this.handleSwipe = handleSwipe;
+    }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    new Carousel('.carousel-container');
+});
 
 // Initialize counters when they come into view
 const priceAmounts = document.querySelectorAll('.amount');
