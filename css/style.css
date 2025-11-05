@@ -1154,9 +1154,10 @@ section {
 }
 
 .footer-logo {
-    height: 40px;
+    height: 80px;
+    width: auto;
     margin-bottom: 20px;
-    filter: brightness(0) invert(1);
+    object-fit: contain;
 }
 
 .footer-clinic-name {
