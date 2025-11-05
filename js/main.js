@@ -137,11 +137,11 @@ const translations = {
         getInTouch: "Đặt Lịch Hẹn",
         
         // Hero Section
-        heroTitle: "Bàn tay chữa lành, trái tim yêu thương cho mọi lứa tuổi",
-        heroSubtitle: "Chăm sóc trị liệu xương khớp chuyên nghiệp cho người cao tuổi và trẻ em gặp vấn đề về xương và khớp. Chúng tôi điều trị bằng kinh nghiệm, lòng trắc ẩn và sự tận tâm với sức khỏe của bạn.",
+        heroTitle: "Chăm sóc sức khỏe xương khớp toàn diện",
+        heroSubtitle: "Phòng Vật Lý Trị Liệu 152 là đơn vị chuyên sâu trong lĩnh vực phục hồi chức năng và điều trị bằng các phương pháp vật lý trị liệu hiện đại, hướng đến mục tiêu giúp người bệnh phục hồi vận động, giảm đau và nâng cao chất lượng cuộc sống một cách bền vững. Tại đây, mọi phác đồ điều trị đều được xây dựng dựa trên các bằng chứng y học đáng tin cậy, kết hợp giữa kỹ thuật hiện đại và sự theo dõi sát sao của đội ngũ chuyên môn, nhằm đảm bảo hiệu quả và an toàn cho từng bệnh nhân.",
         
         // Form
-        formTitle: "Hành trình chữa lành của bạn bắt đầu từ đây!",
+        formTitle: "Chuyên nghiệp tận tâm vì cộng đồng!",
         formName: "Họ và Tên",
         formEmail: "Email",
         formPhone: "Số Điện Thoại",
@@ -154,25 +154,25 @@ const translations = {
         formYourMessage: "Mô tả tình trạng của bạn",
         
         // About Section
-        aboutTitle: "Trải nghiệm sự chữa lành từ trái tim chúng tôi",
-        aboutDesc: "Chúng tôi chuyên về chăm sóc trị liệu xương khớp cho bệnh nhân cao tuổi và trẻ em đối mặt với các thách thức về xương và khớp. Với nhiều năm kinh nghiệm và lòng trắc ẩn chân thành, chúng tôi cung cấp các kế hoạch điều trị cá nhân hóa giúp phục hồi khả năng vận động, giảm đau và cải thiện chất lượng cuộc sống.",
+        aboutTitle: "Mọi quy trình điều trị đều được xây dựng dựa trên nền tảng Y Học Thực Chứng (Evidence-Based Medicine)",
+        aboutDesc: "Phòng Khám 152 hoạt động theo phương châm “Y Học Thực Chứng” – mọi phương pháp điều trị đều dựa trên bằng chứng khoa học rõ ràng, được kiểm chứng lâm sàng và phù hợp với tình trạng từng bệnh nhân. Chúng tôi tin rằng sức khỏe bền vững chỉ có được khi điều trị đúng nguyên nhân và áp dụng liệu pháp phù hợp, an toàn, cá nhân hóa.",
         videoCaption: "Xem cách chúng tôi giúp bệnh nhân phục hồi sức khỏe",
         clinicName: "Vật lý trị liệu 152",
         
         // Services Section
-        servicesTitle: "Phương Pháp Điều Trị Chuyên Khoa",
-        servicesSubtitle: "Chăm sóc trị liệu xương khớp toàn diện cho mọi lứa tuổi",
-        service1Title: "Chăm Sóc Khớp Người Cao Tuổi",
-        service1Desc: "Điều trị nhẹ nhàng, hiệu quả cho viêm khớp, vấn đề vận động và các vấn đề khớp liên quan đến tuổi tác. Chúng tôi phục hồi sự thoải mái và độc lập với sự chăm sóc từ trái tim.",
-        service2Title: "Trị Liệu Xương Khớp Nhi Khoa",
-        service2Desc: "Chăm sóc chuyên khoa cho xương và khớp đang phát triển của trẻ em. Điều chỉnh an toàn, nhẹ nhàng cho vẹo cột sống, vấn đề tư thế và các vấn đề phát triển.",
-        service3Title: "Chỉnh Cột Sống",
-        service3Desc: "Điều chỉnh cột sống chuyên nghiệp sử dụng các kỹ thuật đã được chứng minh để giảm đau, cải thiện tư thế và nâng cao sức khỏe tổng thể cho bệnh nhân ở mọi lứa tuổi.",
-        service4Title: "Trị Liệu Phục Hồi Chức Năng",
-        service4Desc: "Chương trình trị liệu tùy chỉnh kết hợp điều chỉnh, bài tập và giáo dục sức khỏe để đạt được kết quả lâu dài và sức khỏe tối ưu.",
+        servicesTitle: "Phương châm “Y Học Thực Chứng”",
+        servicesSubtitle: "Giải quyết tận gốc nguyên nhân gây đau và phục hồi lâu dài, hạn chế tái phát.",
+        service1Title: "Điều trị đau vai gáy – đau lưng – thoái hóa cột sống",
+        service1Desc: "Áp dụng các kỹ thuật hiện đại như điện xung, siêu âm trị liệu, sóng ngắn kết hợp với bài tập chuyên biệt giúp giảm đau nhanh, phục hồi độ linh hoạt của cột sống.",
+        service2Title: "Phục hồi sau tai biến, chấn thương, phẫu thuật",
+        service2Desc: "Thiết kế phác đồ điều trị cá nhân hóa, kết hợp giữa vật lý trị liệu và bài tập phục hồi chức năng, giúp bệnh nhân lấy lại khả năng vận động và tự chủ trong sinh hoạt.",
+        service3Title: "Điều trị tê tay, tê chân, thoát vị đĩa đệm",
+        service3Desc: "Sử dụng kỹ thuật kéo giãn cột sống, trị liệu thần kinh – cơ và các bài tập phục hồi tuần hoàn, giúp giảm áp lực lên rễ thần kinh.",
+        service4Title: "Trị liệu chỉnh hình – nắn cơ xương khớp",
+        service4Desc: "Phù hợp cho người thường xuyên ngồi làm việc, vận động sai tư thế hoặc chơi thể thao quá sức. Giúp giảm căng cơ, điều chỉnh lệch khớp và cải thiện dáng đứng, dáng ngồi.",
         
         // Testimonials
-        testimonialsTitle: "Câu Chuyện Chữa Lành & Hy Vọng",
+        testimonialsTitle: "Chia sẻ từ các bệnh nhân đã điều trị tại phòng khám",
         testimonialsSubtitle: "Trải nghiệm thực tế từ bệnh nhân và gia đình của họ",
         testimonial1: '"Cơn đau viêm khớp của bà tôi đã giảm đáng kể. Sự chăm sóc ở đây thực sự đến từ trái tim. Bà giờ có thể đi lại tự tin trở lại!"',
         testimonial2: '"Tư thế của con trai tôi đã cải thiện đáng kể chỉ sau vài buổi điều trị. Các bác sĩ cực kỳ giàu kinh nghiệm và nhẹ nhàng với trẻ em."',
@@ -181,7 +181,7 @@ const translations = {
         
         // Team Section
         teamTitle: "Đội Ngũ Bác Sĩ Giàu Kinh Nghiệm",
-        teamSubtitle: "Chữa lành bằng chuyên môn, lòng trắc ẩn và trái tim",
+        teamSubtitle: "Nhiều năm kinh nghiệm trong lĩnh vực phục hồi chức năng và điều trị cơ xương khớp",
         team1Role: "Bác Sĩ Trưởng - Hơn 20 Năm Kinh Nghiệm",
         team2Role: "Chuyên Gia Nhi Khoa",
         team3Role: "Chuyên Gia Chăm Sóc Người Cao Tuổi",
@@ -213,7 +213,7 @@ const translations = {
         
         // Contact Section
         contactTitle: "Bắt Đầu Hành Trình Chữa Lành",
-        contactDesc: "Chúng tôi quan tâm sâu sắc đến sức khỏe của bạn. Liên hệ với chúng tôi để đặt lịch tư vấn hoặc đặt bất kỳ câu hỏi nào về các phương pháp điều trị xương khớp.",
+        contactDesc: "Mục tiêu cuối cùng của chúng tôi là giúp bạn thoát khỏi cơn đau, lấy lại sự linh hoạt, khỏe mạnh và tự tin trong cuộc sống hàng ngày.",
         contactAddress: "Địa Chỉ",
         contactPhone: "Điện Thoại",
         contactEmail: "Email",
@@ -226,7 +226,8 @@ const translations = {
         footerNursingCare: "Chăm Sóc Khớp Người Cao Tuổi",
         footerMedicalSupport: "Trị Liệu Xương Khớp Nhi Khoa",
         footerPersonalCare: "Chỉnh Cột Sống",
-        footerActivities: "Phục Hồi Chức Năng"
+        footerActivities: "Phục Hồi Chức Năng",
+        findUs: "Tìm chúng tôi trên bản đồ"
     }
 };
 
@@ -596,7 +597,82 @@ class Carousel {
 // Initialize carousel when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     new Carousel('.carousel-container');
+    
+    // Initialize Services Cards Carousel
+    const servicesCarousel = new ServicesCardsCarousel('.cards-carousel-container');
 });
+
+// ===========================
+// Services Cards Carousel
+// ===========================
+class ServicesCardsCarousel {
+    constructor(containerSelector) {
+        this.container = document.querySelector(containerSelector);
+        if (!this.container) return;
+        
+        this.cards = this.container.querySelectorAll('.service-card');
+        this.dots = this.container.querySelectorAll('.cards-dots .dot');
+        this.prevBtn = this.container.querySelector('.cards-prev');
+        this.nextBtn = this.container.querySelector('.cards-next');
+        
+        this.currentCard = 0;
+        this.autoPlayInterval = null;
+        this.autoPlayDelay = 5000; // 5 seconds
+        
+        this.init();
+    }
+    
+    init() {
+        // Add event listeners
+        this.prevBtn?.addEventListener('click', () => this.prev());
+        this.nextBtn?.addEventListener('click', () => this.next());
+        
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.goToCard(index));
+        });
+        
+        // Start autoplay
+        this.startAutoPlay();
+        
+        // Pause on hover
+        this.container.addEventListener('mouseenter', () => this.stopAutoPlay());
+        this.container.addEventListener('mouseleave', () => this.startAutoPlay());
+    }
+    
+    goToCard(index) {
+        // Remove active class from current card and dot
+        this.cards[this.currentCard]?.classList.remove('active');
+        this.dots[this.currentCard]?.classList.remove('active');
+        
+        // Update current card
+        this.currentCard = index;
+        
+        // Add active class to new card and dot
+        this.cards[this.currentCard]?.classList.add('active');
+        this.dots[this.currentCard]?.classList.add('active');
+    }
+    
+    next() {
+        const nextCard = (this.currentCard + 1) % this.cards.length;
+        this.goToCard(nextCard);
+    }
+    
+    prev() {
+        const prevCard = (this.currentCard - 1 + this.cards.length) % this.cards.length;
+        this.goToCard(prevCard);
+    }
+    
+    startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => this.next(), this.autoPlayDelay);
+    }
+    
+    stopAutoPlay() {
+        if (this.autoPlayInterval) {
+            clearInterval(this.autoPlayInterval);
+            this.autoPlayInterval = null;
+        }
+    }
+}
 
 // Initialize counters when they come into view
 const priceAmounts = document.querySelectorAll('.amount');

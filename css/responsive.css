@@ -312,6 +312,33 @@
         padding: 30px;
     }
 
+    /* Maps Mobile */
+    .maps-area {
+        margin-top: 40px;
+    }
+
+    .maps-area.maps-top {
+        margin-bottom: 40px;
+    }
+
+    .google-maps {
+        padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+    }
+
+    /* Hero Map Preview Mobile */
+    .hero-map-preview {
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .hero-map-preview h3 {
+        font-size: 1.1rem;
+    }
+
+    .mini-map {
+        padding-bottom: 70%;
+    }
+
     /* Footer Mobile */
     .footer-content {
         grid-template-columns: 1fr;
